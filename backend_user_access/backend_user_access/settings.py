@@ -83,12 +83,18 @@ WSGI_APPLICATION = 'backend_user_access.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'mydatabase',
-        'USER': 'mydatabaseuser',
-        'PASSWORD': 'mypassword',
+        'NAME': 'user_access_db',
+        'USER': 'postgres',
+        'PASSWORD': 'yp970417',
         'HOST': 'localhost',
         'PORT': '5432',
     }
+}
+
+
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 15
 }
 
 
